@@ -14,31 +14,26 @@ let prezzoKm;
 
 let prezzoFinale;
 
-let scontoUnder18;
-
-let scontoOver60;
-
 prezzoKm = numerokm * 0.21;
 console.log(`prezzo in km sono: ${prezzoKm} € `); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
 
 if(etàPasseggero < 18){;
-etàPasseggero = scontoUnder18
-    scontoUnder18 = prezzoKm - prezzoKm * 20/100;
-    scontoUnder18 = prezzoFinale
+
+    prezzoFinale = prezzoKm - prezzoKm * 20/100; //sconto del 20%
+    
     console.log(`sconto minorenni`)
 }
 
 else if(etàPasseggero > 60){;
-    etàPasseggero = scontoOver60
-    scontoOver60 = prezzoKm - prezzoKm * 40/100;
-    scontoOver60 = prezzoFinale
+   
+    prezzoFinale = prezzoKm - prezzoKm * 40/100;//sconto del 40%
+    
     console.log(`sconto sopra i 60`)
 }
 
 else{
-    prezzoKm = prezzoFinale
+    prezzoFinale = prezzoKm
+    console.log(`nessuno sconto`)// zero sconti
 }
-
-
 
 console.log(`il prezzo finale è: ${prezzoFinale} €`)
