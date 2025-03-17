@@ -6,7 +6,7 @@ Il programma dovrà chiedere all'utente il numero di chilometri che vuole percor
 - L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 */
 
-let numerokm = prompt(`inserisci distanza viaggio in Km`);
+let numerokm = prompt(`inserisci distanza viaggio in Km`);//numero di kilometri
 numerokm = numerokm * 0.21;
 console.log(numerokm); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
 
