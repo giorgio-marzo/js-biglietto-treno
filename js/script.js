@@ -15,7 +15,7 @@ let prezzoKm;
 let prezzoFinale;
 
 prezzoKm = numerokm * 0.21;
-console.log(`prezzo in km sono: ${prezzoKm} € `); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
+console.log(`prezzo in km sono: ${(prezzoKm.toFixed(2))} € `); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
 
 if(etàPasseggero < 18){;
 
@@ -36,4 +36,4 @@ else{
     console.log(`nessuno sconto`)// zero sconti
 }
 
-console.log(`il prezzo finale è: ${prezzoFinale} €`)
+console.log(`il prezzo finale è: ${(prezzoFinale.toFixed(2))} €`)
