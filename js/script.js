@@ -7,6 +7,38 @@ Il programma dovrà chiedere all'utente il numero di chilometri che vuole percor
 */
 
 let numerokm = prompt(`inserisci distanza viaggio in Km`);//numero di kilometri
-numerokm = numerokm * 0.21;
-console.log(numerokm); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
 
+let etàPasseggero = prompt(`quanti anni hai ?`);
+
+let prezzoKm;
+
+let prezzoFinale;
+
+let scontoUnder18;
+
+let scontoOver60;
+
+prezzoKm = numerokm * 0.21;
+console.log(`prezzo in km sono: ${prezzoKm} € `); // impostato prezzo in km * 0.21 (es:10 km = 21 €)
+
+if(etàPasseggero < 18){;
+etàPasseggero = scontoUnder18
+    scontoUnder18 = prezzoKm - prezzoKm * 20/100;
+    scontoUnder18 = prezzoFinale
+    console.log(`sconto minorenni`)
+}
+
+else if(etàPasseggero > 60){;
+    etàPasseggero = scontoOver60
+    scontoOver60 = prezzoKm - prezzoKm * 40/100;
+    scontoOver60 = prezzoFinale
+    console.log(`sconto sopra i 60`)
+}
+
+else{
+    prezzoKm = prezzoFinale
+}
+
+
+
+console.log(`il prezzo finale è: ${prezzoFinale} €`)
